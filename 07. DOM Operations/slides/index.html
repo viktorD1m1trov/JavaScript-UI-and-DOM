@@ -132,7 +132,7 @@
     var children = trainersList.childNodes;
     log("elements in trainers-list: " + children.length);
     log("element in trainers-list");
-    for (var i = 0, len = children.length; i < len; i++) {
+    for (var i = 0, len = children.length; i < len; i+=1) {
       var subItem = children[i];
       log(subItem.nodeName + " content: " +
           subItem.innerText);
@@ -352,7 +352,7 @@
                   * http://jsperf.com/append-doc-fragment/2 <!-- .element: target="_blank" -->
                   
                   
-                    dFrag = document.createDocumentFragment();
+                    var dFrag = document.createDocumentFragment();
   
                     dFrag.appendChild(div);
                     
